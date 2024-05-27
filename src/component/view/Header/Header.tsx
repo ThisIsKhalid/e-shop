@@ -3,7 +3,7 @@ import TopHeader from "./TopHeader"
 
 const Header = () => {
   return (
-    <div className="p-20">
+    <div className="">
       <TopHeader />
       <Button>Click Here</Button>
       <Button variant="secondary" className="">Click Here</Button>
