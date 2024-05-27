@@ -4,10 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        lavender: "#d7d0ff",
-        primary: "#5f48e6",
-        darkCharcoal: "#151921",
-        secondary: "#c7f4c2",
+        primary: "#fd7373",
+        secondary: "#ffda55",
+        tertiary: "#e5ff7f",
       },
     },
   },
