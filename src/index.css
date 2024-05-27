@@ -13,9 +13,3 @@ body {
   /* border: 1px solid red; */
   height: 100vh;
 }
-
-@media (max-width: 640px) {
-  body {
-    padding: 0 10px;
-  }
-}
