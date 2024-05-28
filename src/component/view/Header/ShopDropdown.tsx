@@ -35,7 +35,7 @@ const ShopDropdown: React.FC = () => {
 
   return (
     <div
-      className="flex items-center gap-2 group relative py-4"
+      className="flex items-center gap-2 group relative py-6"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={toggleDropdown}

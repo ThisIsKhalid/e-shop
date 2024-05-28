@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CiHeart, CiSearch, CiShoppingCart } from "react-icons/ci";
+import { CiHeart, CiSearch, CiShoppingCart, CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import Form from "../../ui/Form/Form";
 import Input from "../../ui/Input/Input";
@@ -12,6 +12,7 @@ type FormValues = {
 
 const Header = () => {
   const [menuBtn, setMenuBtn] = useState(false);
+  const [profileDropdown, setProfileDropdown] = useState(false);
 
   const onSubmit = (data: FormValues) => console.log(data.searchInfo);
 
@@ -31,8 +32,8 @@ const Header = () => {
             }`}
             onClick={() => setMenuBtn(!menuBtn)}
           />
-          <Link to="/" className="md:text-3xl text-2xl font-bold text-black ">
-            FashionBazar
+          <Link to="/" className="flex items-center text-3xl md:text-4xl logo">
+            Fashion Bazar
           </Link>
         </div>
 
@@ -66,8 +67,36 @@ const Header = () => {
               5
             </span>
           </div>
-          <div className="cursor-pointer">
-            <img src="./icons/user.png" alt="" className="w-5 md:w-6 h-5 md:h-6" />
+          <div
+            className="cursor-pointer relative"
+            onClick={() => setProfileDropdown(!profileDropdown)}
+          >
+            <CiUser
+              className={`w-6 md:w-7 h-6 md:h-7 cursor-pointer transition-colors ${
+                profileDropdown ? "text-primary" : "text-black"
+              }`}
+            />
+
+            {/* profile dropdown */}
+            {profileDropdown && (
+              <div className="absolute top-10 right-0 w-40 bg-white border border-gray-200 shadow-lg rounded-md py-3">
+                <ul className="flex flex-col">
+                  <li className="hover:bg-primary hover:text-white cursor-pointer px-3 py-1">
+                    Profile
+                  </li>
+                  <li className="hover:bg-primary hover:text-white cursor-pointer px-3 py-1">
+                    Orders
+                  </li>
+                  <li className="hover:bg-primary hover:text-white cursor-pointer px-3 py-1">
+                    Dashboard
+                  </li>
+
+                  <li className="hover:bg-primary hover:text-white  cursor-pointer px-3 py-1">
+                    Logout
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </div>

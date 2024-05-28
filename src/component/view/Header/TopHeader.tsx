@@ -12,17 +12,19 @@ export default function TopHeader() {
       <div className="h-full flex items-center justify-between gap-3 text-primary font-medium">
         <div className="flex items-center gap-1 group cursor-pointer">
           <FaBoltLightning />
-          <span className="text-[8px] md:text-xs">EXCLUSIVE T-SHIRTS ON SALE | Limited time only</span>
+          <span className="text-[8px] md:text-xs">
+            EXCLUSIVE T-SHIRTS ON SALE | Limited time only
+          </span>
           <FaRegArrowAltCircleRight className="ml-1 group-hover:ml-3 transition-all" />
         </div>
         <div className="flex items-center gap-3 text-white/80">
-          <div className="text-base">
+          <div className="text-xs md:text-base">
             <FaFacebook />
           </div>
-          <div className="text-base">
+          <div className="text-xs md:text-base">
             <FaYoutube />
           </div>
-          <div className="text-base">
+          <div className="text-xs md:text-base">
             <FaInstagram />
           </div>
         </div>
