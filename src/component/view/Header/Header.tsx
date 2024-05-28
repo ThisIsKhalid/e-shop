@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Form from "../../ui/Form/Form";
 import Input from "../../ui/Input/Input";
 import ShopDropdown from "./ShopDropdown";
+import SideNav from "./SideNav";
 import TopHeader from "./TopHeader";
 
 type FormValues = {
@@ -17,21 +18,37 @@ const Header = () => {
   const onSubmit = (data: FormValues) => console.log(data.searchInfo);
 
   return (
-    <div className="">
+    <div className="relative">
       <TopHeader />
 
       <div className="flex items-center justify-between py-4 lg:py-0 md:px-10 px-5 bg-gray-50">
         <div className="flex items-center md:gap-5 gap-3">
-          <img
-            src="./icons/app.png"
-            alt=""
-            className={`md:h-9 md:w-9 h-7 w-7 cursor-pointer ${
-              menuBtn
-                ? "rotate-180 transition-all duration-300 ease-in-out"
-                : "-rotate-0 transition-all duration-300 ease-in-out"
-            }`}
+          <div
             onClick={() => setMenuBtn(!menuBtn)}
-          />
+            className="md:h-9 md:w-9 h-7 w-7 cursor-pointer"
+          >
+            {menuBtn ? (
+              <img
+                src="./icons/close.png"
+                alt=""
+                className={`md:h-8 md:w-8 h-6 w-6 ${
+                  menuBtn
+                    ? "rotate-180 transition-all duration-300 ease-in-out"
+                    : ""
+                }`}
+              />
+            ) : (
+              <img
+                src="./icons/menu.png"
+                alt=""
+                className={`md:h-9 md:w-9 h-7 w-7 ${
+                  menuBtn
+                    ? ""
+                    : "rotate-0 transition-all duration-300 ease-in-out"
+                }`}
+              />
+            )}
+          </div>
           <Link to="/" className="flex items-center text-3xl md:text-4xl logo">
             Fashion Bazar
           </Link>
@@ -99,6 +116,15 @@ const Header = () => {
             )}
           </div>
         </div>
+      </div>
+
+      {/* mobile menu */}
+      <div
+        className={`absolute transition-all duration-700 ease-in-out bg-gray-800 text-white h-screen w-[350px] z-50   
+      ${menuBtn ? "left-0" : "-left-full"}
+      `}
+      >
+        <SideNav />
       </div>
     </div>
   );
