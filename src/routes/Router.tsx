@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layouts/Layout";
 import Contact from "../pages/Contact/Contact";
 import Home from "../pages/Home/Home";
+import SignIn from "../pages/Login/SignIn";
+import SignUp from "../pages/Login/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,18 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/signin",
+    element: <SignIn />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
+  },
+  {
+    path: "*",
+    element: <div>404 Not Found</div>,
+  }
 ]);
 
 export default router;

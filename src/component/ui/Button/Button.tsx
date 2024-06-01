@@ -4,7 +4,7 @@ import cn from "../../../lib/cn";
 type ButtonProps = {
   children: ReactNode;
   className?: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "outline";
   size?: "sm" | "md" | "lg";
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -19,8 +19,10 @@ const Button: FC<ButtonProps> = ({
     "inline-flex items-center justify-center font-medium focus:outline-none uppercase rounded transition-colors duration-300";
 
   const variantStyles = {
-    primary: "bg-primary text-white hover:bg-black ",
-    secondary: "bg-secondary text-black/80 hover:text-white hover:bg-primary",
+    primary: "bg-primary text-white hover:bg-gray-900 ",
+    secondary: "bg-secondary text-black/80 hover:text-white hover:bg-gray-900",
+    outline:
+      "hover:bg-gray-900 hover:text-white bg-inherit border border-gray-900 text-black transition-colors duration-300 ease-in-out",
   };
 
   const sizeStyles = {

@@ -6,6 +6,7 @@ import Input from "../../ui/Input/Input";
 import ShopDropdown from "./ShopDropdown";
 import SideNav from "./SideNav";
 import TopHeader from "./TopHeader";
+import Button from "../../ui/Button/Button";
 
 type FormValues = {
   searchInfo: string;
@@ -84,7 +85,12 @@ const Header = () => {
               5
             </span>
           </div>
-          <div
+          <Link to='/signin'>
+            <Button className="bg-gray-900 ml-3 hover:bg-primary">
+              Login
+            </Button>
+          </Link>
+          {/* <div
             className="cursor-pointer relative"
             onClick={() => setProfileDropdown(!profileDropdown)}
           >
@@ -94,7 +100,7 @@ const Header = () => {
               }`}
             />
 
-            {/* profile dropdown */}
+            profile dropdown
             {profileDropdown && (
               <div className="absolute top-10 right-0 w-40 bg-white border border-gray-200 shadow-lg rounded-md py-3">
                 <ul className="flex flex-col">
@@ -114,7 +120,7 @@ const Header = () => {
                 </ul>
               </div>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
 

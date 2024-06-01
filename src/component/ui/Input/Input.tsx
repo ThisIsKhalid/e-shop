@@ -6,12 +6,13 @@ type InputProps = React.DetailedHTMLProps<
   HTMLInputElement
 > & {
   error?: string;
+  label?: string;
 };
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ error, className, ...props }, ref) => {
+  ({ error, label, className, ...props }, ref) => {
     const inputClasses = cn(
-      "border rounded p-2 w-full focus:outline-gray-900 focus:ring-0 placeholder:text-sm",
+      "border rounded p-2 w-full focus:outline-gray-900 focus:ring-0 placeholder:text-sm text-base h-12",
       {
         "border-red-500": error,
         "border-gray-500": !error,
@@ -21,6 +22,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <div className="">
+        {label && <label className="text-sm">{label}</label>}
         <input ref={ref} className={inputClasses} {...props} />
         {error && <p className="text-red-500 mt-1 text-sm">{error}</p>}
       </div>
