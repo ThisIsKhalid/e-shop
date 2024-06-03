@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { CiHeart, CiLogin, CiSearch, CiShoppingCart, CiUser } from "react-icons/ci";
+import { CiHeart, CiLogin, CiSearch, CiShoppingCart } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import Button from "../../ui/Button/Button";
+// import Button from "../../ui/Button/Button";
 import Form from "../../ui/Form/Form";
 import Input from "../../ui/Input/Input";
 import ShopDropdown from "./ShopDropdown";
@@ -14,7 +14,7 @@ type FormValues = {
 
 const Header = () => {
   const [menuBtn, setMenuBtn] = useState(false);
-  const [profileDropdown, setProfileDropdown] = useState(false);
+  // const [profileDropdown, setProfileDropdown] = useState(false);
 
   const onSubmit = (data: FormValues) => console.log(data.searchInfo);
 
