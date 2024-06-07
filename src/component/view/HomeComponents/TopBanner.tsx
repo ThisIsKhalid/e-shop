@@ -9,12 +9,12 @@ import { Mousewheel } from "swiper/modules";
 export default function TopBanner() {
   return (
     <Swiper
-      direction={"vertical"}
+//    direction={"vertical"}
       grabCursor={true}
       mousewheel={{ releaseOnEdges: true }}
       modules={[Mousewheel]}
       spaceBetween={30}
-      className="h-[650px] md:px-10 px-5 md:my-10 my-5"
+      className="md:h-[650px] h-[450px] md:px-10 px-5 md:my-10 my-5"
     >
       <SwiperSlide className="h-full flex items-center md:flex-row flex-col-reverse">
         <div className="h-full w-full md:w-1/2 bg-gray-800 flex items-center justify-center p-5">
