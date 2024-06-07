@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 import { categories } from "../../../data/categories";
 
 // Define types
@@ -47,35 +48,55 @@ const SideNav = () => {
 
   return (
     <div className="px-5 md:px-10 py-5">
-      <h1 className="text-xl font-bold uppercase">Categories</h1>
+      <h1 className="text-2xl font-bold uppercase text-gray-500">Categories</h1>
 
       {categories.map((category: Category) => (
-        <div key={category.id} className="mt-5">
-          <h2
-            className="text-lg font-semibold cursor-pointer"
+        <div key={category.id} className="mt-3">
+          <div
+            className="flex items-center justify-between"
             onClick={() => toggleCategory(category.id)}
           >
-            {category.name}
-          </h2>
+            <h1 className="text-lg font-semibold cursor-pointer">
+              {category.name}
+            </h1>
+            {category.subCategories && (
+              <IoIosArrowDown
+                className={`${
+                  openCategories[category.id] ? "transform rotate-180" : ""
+                }`}
+              />
+            )}
+          </div>
 
           {openCategories[category.id] && (
-            <ul className="mt-2 transition duration-500 ease-in-out delay-200">
+            <ul className="ml-5 mt-2 transition duration-500 ease-in-out delay-200">
               {category.subCategories?.map((subCategory: SubCategory) => (
                 <li key={subCategory.id} className="mt-2">
-                  <h3
-                    className="font-semibold cursor-pointer"
+                  <div
+                    className="flex items-center justify-between"
                     onClick={() =>
                       toggleSubCategory(category.id, subCategory.id)
                     }
                   >
-                    {subCategory.name}
-                  </h3>
+                    <h3 className="font-medium text-base cursor-pointer">
+                      {subCategory.name}
+                    </h3>
+                    {subCategory.subSubCategories && (
+                      <IoIosArrowDown
+                        className={`${
+                          openSubCategories[category.id] === subCategory.id
+                            ? "transform rotate-180"
+                            : ""
+                        }`}
+                      />
+                    )}
+                  </div>
                   {openSubCategories[category.id] === subCategory.id && (
-                    <ul className="mt-2 transition-all duration-500 ease-in-out transform">
+                    <ul className="ml-5 mt-2 transition-all duration-500 ease-in-out transform">
                       {subCategory.subSubCategories?.map(
                         (subSubCategory: SubSubCategory) => (
                           <li key={subSubCategory.id} className="mt-2">
-                            <h4>{subSubCategory.name}</h4>
+                            <h4 className="text-sm">{subSubCategory.name}</h4>
                           </li>
                         )
                       )}

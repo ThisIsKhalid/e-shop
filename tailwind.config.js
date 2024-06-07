@@ -5,11 +5,11 @@ export default {
     extend: {
       colors: {
         primary: "#fd7373",
-        secondary: "#ffda55",
+        // secondary: "#ffda55",
+        secondary: "#FFD670",
         tertiary: "#e5ff7f",
       },
     },
   },
   plugins: [],
 };
-

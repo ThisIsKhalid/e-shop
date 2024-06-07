@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { CiHeart, CiLogin, CiSearch, CiShoppingCart } from "react-icons/ci";
+import { CiHeart, CiLogin, CiSearch, CiShoppingCart, CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 // import Button from "../../ui/Button/Button";
 import Form from "../../ui/Form/Form";
 import Input from "../../ui/Input/Input";
-import ShopDropdown from "./ShopDropdown";
+// import ShopDropdown from "./ShopDropdown";
 import SideNav from "./SideNav";
 import TopHeader from "./TopHeader";
 
@@ -14,7 +14,7 @@ type FormValues = {
 
 const Header = () => {
   const [menuBtn, setMenuBtn] = useState(false);
-  // const [profileDropdown, setProfileDropdown] = useState(false);
+  const [profileDropdown, setProfileDropdown] = useState(false);
 
   const onSubmit = (data: FormValues) => console.log(data.searchInfo);
 
@@ -22,8 +22,8 @@ const Header = () => {
     <div className="relative">
       <TopHeader />
 
-      <div className="bg-gray-50">
-        <div className="main_container flex items-center justify-between py-4 lg:py-0 md:px-10 px-5">
+      <div className="bg-secondary">
+        <div className="main_container flex items-center justify-between py-2 md:px-10 px-5">
           <div className="flex items-center md:gap-5 gap-3">
             <div
               onClick={() => setMenuBtn(!menuBtn)}
@@ -53,9 +53,9 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="hidden lg:flex">
+          {/* <div className="hidden lg:flex">
             <ShopDropdown />
-          </div>
+          </div> */}
 
           <div className="flex items-center gap-2">
             <div className="relative hidden md:flex">
@@ -66,7 +66,7 @@ const Header = () => {
                       {...register("searchInfo", {
                         required: "This field is required",
                       })}
-                      className="w-48 lg:w-60 xl:w-96 bg-gray-50 "
+                      className="w-48 lg:w-60 xl:w-96 bg-gray-50 border-none"
                       placeholder="Search for products..."
                     />
                   </div>
@@ -79,14 +79,14 @@ const Header = () => {
             <CiHeart className="w-6 md:w-7 h-6 md:h-7 cursor-pointer ml-0 md:ml-5" />
             <div className="relative">
               <CiShoppingCart className="w-6 md:w-7 h-6 md:h-7 cursor-pointer" />
-              <span className="absolute -top-2 -right-2 bg-secondary rounded-full h-5 w-5 text-center text-sm">
+              <span className="absolute -top-2 -right-2 bg-gray-50 rounded-full h-5 w-5 text-center text-sm">
                 5
               </span>
             </div>
             <Link to="/signin">
               <CiLogin className="w-6 md:w-7 h-6 md:h-7" />
             </Link>
-            {/* <div
+            <div
               className="cursor-pointer relative"
               onClick={() => setProfileDropdown(!profileDropdown)}
             >
@@ -95,8 +95,8 @@ const Header = () => {
                   profileDropdown ? "text-primary" : "text-black"
                 }`}
               />
-  
-              profile dropdown
+
+              {/* profile dropdown */}
               {profileDropdown && (
                 <div className="absolute top-10 right-0 w-40 bg-white border border-gray-200 shadow-lg rounded-md py-3">
                   <ul className="flex flex-col">
@@ -109,21 +109,21 @@ const Header = () => {
                     <li className="hover:bg-primary hover:text-white cursor-pointer px-3 py-1">
                       Dashboard
                     </li>
-  
+
                     <li className="hover:bg-primary hover:text-white  cursor-pointer px-3 py-1">
                       Logout
                     </li>
                   </ul>
                 </div>
               )}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
 
       {/* mobile menu */}
       <div
-        className={`absolute transition-all duration-700 ease-in-out bg-gray-800 text-white min-h-screen lg:w-[400px] w-[90%] z-50   
+        className={`absolute transition-all duration-700 ease-in-out bg-gray-50 h-screen lg:w-[400px] w-[90%] z-50  overflow-auto  
       ${menuBtn ? "left-0" : "-left-full"}
       `}
       >
