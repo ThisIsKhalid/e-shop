@@ -18,7 +18,7 @@ body {
 }
 
 .main_container {
-  /* max-width: 1440px; */
+  max-width: 1440px;
   margin: 0 auto;
   height: 100%;
 }
@@ -33,4 +33,35 @@ body {
     rgb(46, 46, 46) 50%,
     rgb(223, 223, 223) 50%
   );
+}
+
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slide-up 0.5s ease-out;
+}
+
+.slide-down {
+  animation: slide-down 0.5s ease-out;
 }

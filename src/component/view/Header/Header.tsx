@@ -23,7 +23,7 @@ const Header = () => {
       <TopHeader />
 
       <div className="bg-secondary">
-        <div className="main_container flex items-center justify-between py-2 md:px-10 px-5">
+        <div className=" flex items-center justify-between py-2 md:px-10 px-5">
           <div className="flex items-center md:gap-5 gap-3">
             <div
               onClick={() => setMenuBtn(!menuBtn)}

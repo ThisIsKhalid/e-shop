@@ -9,7 +9,7 @@ import { FaBoltLightning } from "react-icons/fa6";
 export default function TopHeader() {
   return (
     <div className="h-8 bg-gray-800 text-white ">
-      <div className="main_container px-5 md:px-10">
+      <div className="h-full px-5 md:px-10">
         <div className="h-full flex items-center justify-between gap-3 text-primary font-medium">
           <div className="flex items-center gap-1 group cursor-pointer">
             <FaBoltLightning />
