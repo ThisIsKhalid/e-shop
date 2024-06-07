@@ -4,18 +4,22 @@ import Button from "../../ui/Button/Button";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
-// import { Mousewheel } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 export default function TopBanner() {
   return (
     <Swiper
       loop={true}
       // direction={"vertical"}
-      grabCursor={true}
+      // grabCursor={true}
       // mousewheel={{ releaseOnEdges: true }}
-      // modules={[Mousewheel]}
-      spaceBetween={30}
-      className="md:h-[650px] h-[500px] md:px-10 px-5 md:my-10 my-5"
+      modules={[Autoplay]}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      spaceBetween={100}
+      className="md:h-[600px] h-[500px] md:px-10 px-5 md:my-10 my-5"
     >
       <SwiperSlide className="h-full flex items-center md:flex-row flex-col-reverse">
         <div className="md:h-full h-[30%] w-full md:w-1/2 bg-gray-800 flex items-center justify-center p-5">
