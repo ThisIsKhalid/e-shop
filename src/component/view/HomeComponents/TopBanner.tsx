@@ -18,7 +18,7 @@ export default function TopBanner() {
       className="md:h-[650px] h-[500px] md:px-10 px-5 md:my-10 my-5"
     >
       <SwiperSlide className="h-full flex items-center md:flex-row flex-col-reverse">
-        <div className="md:h-full h-[70%] w-full md:w-1/2 bg-gray-800 flex items-center justify-center p-5">
+        <div className="md:h-full h-[30%] w-full md:w-1/2 bg-gray-800 flex items-center justify-center p-5">
           <div>
             <h1 className="text-white uppercase lg:text-6xl md:text-5xl text-3xl  font-bold">
               EID AL- ADHA 24
@@ -31,7 +31,7 @@ export default function TopBanner() {
             </Button>
           </div>
         </div>
-        <div className="w-full md:w-1/2 md:h-full h-[30%]">
+        <div className="w-full md:w-1/2 md:h-full h-[70%]">
           <img
             src="https://easyfashion.com.bd/wp-content/uploads/2024/05/Untitled-design-scaled.webp"
             alt=""
