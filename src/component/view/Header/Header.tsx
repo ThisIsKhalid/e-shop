@@ -27,29 +27,23 @@ const Header = () => {
           <div className="flex items-center md:gap-5 gap-3">
             <div
               onClick={() => setMenuBtn(!menuBtn)}
-              className="md:h-9 md:w-9 h-7 w-7 cursor-pointer"
+              className="h-7 w-7 md:h-6 md:w-9 cursor-pointer flex flex-col items-center justify-center"
             >
-              {menuBtn ? (
-                <img
-                  src="./icons/close.png"
-                  alt=""
-                  className={`md:h-7 md:w-7 h-6 w-6 ${
-                    menuBtn
-                      ? "rotate-180 transition-all duration-300 ease-in-out"
-                      : ""
-                  }`}
-                />
-              ) : (
-                <img
-                  src="./icons/menu.png"
-                  alt=""
-                  className={`md:h-9 md:w-9 h-7 w-7 ${
-                    menuBtn
-                      ? ""
-                      : "rotate-0 transition-all duration-300 ease-in-out"
-                  }`}
-                />
-              )}
+              <div
+                className={`bg-black w-full h-1 transition-transform duration-300 ease-in-out ${
+                  menuBtn ? "transform rotate-45 translate-y-2" : ""
+                }`}
+              />
+              <div
+                className={`bg-black w-full h-1 transition-opacity duration-300 ease-in-out my-1 ${
+                  menuBtn ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              <div
+                className={`bg-black w-full h-1 transition-transform duration-300 ease-in-out ${
+                  menuBtn ? "transform -rotate-45 -translate-y-2" : ""
+                }`}
+              />
             </div>
             <Link
               to="/"
