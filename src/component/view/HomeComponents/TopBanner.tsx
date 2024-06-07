@@ -9,15 +9,16 @@ import { Mousewheel } from "swiper/modules";
 export default function TopBanner() {
   return (
     <Swiper
+      loop={true}
 //    direction={"vertical"}
       grabCursor={true}
       mousewheel={{ releaseOnEdges: true }}
       modules={[Mousewheel]}
       spaceBetween={30}
-      className="md:h-[650px] h-[450px] md:px-10 px-5 md:my-10 my-5"
+      className="md:h-[650px] h-[500px] md:px-10 px-5 md:my-10 my-5"
     >
       <SwiperSlide className="h-full flex items-center md:flex-row flex-col-reverse">
-        <div className="h-full w-full md:w-1/2 bg-gray-800 flex items-center justify-center p-5">
+        <div className="md:h-full h-[70%] w-full md:w-1/2 bg-gray-800 flex items-center justify-center p-5">
           <div>
             <h1 className="text-white uppercase lg:text-6xl md:text-5xl text-3xl  font-bold">
               EID AL- ADHA 24
@@ -30,7 +31,7 @@ export default function TopBanner() {
             </Button>
           </div>
         </div>
-        <div className="w-full md:w-1/2 h-full">
+        <div className="w-full md:w-1/2 md:h-full h-[30%]">
           <img
             src="https://easyfashion.com.bd/wp-content/uploads/2024/05/Untitled-design-scaled.webp"
             alt=""
