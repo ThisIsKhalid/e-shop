@@ -1,10 +1,10 @@
+import TopBanner from "../../component/view/HomeComponents/TopBanner";
 
 
 const Home = () => {
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the Home Page.</p>
+      <TopBanner />
     </div>
   );
 };
