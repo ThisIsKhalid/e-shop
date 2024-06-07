@@ -4,16 +4,16 @@ import Button from "../../ui/Button/Button";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
-import { Mousewheel } from "swiper/modules";
+// import { Mousewheel } from "swiper/modules";
 
 export default function TopBanner() {
   return (
     <Swiper
       loop={true}
-//    direction={"vertical"}
+      // direction={"vertical"}
       grabCursor={true}
-      mousewheel={{ releaseOnEdges: true }}
-      modules={[Mousewheel]}
+      // mousewheel={{ releaseOnEdges: true }}
+      // modules={[Mousewheel]}
       spaceBetween={30}
       className="md:h-[650px] h-[500px] md:px-10 px-5 md:my-10 my-5"
     >
@@ -40,7 +40,7 @@ export default function TopBanner() {
         </div>
       </SwiperSlide>
       <SwiperSlide className="h-full flex items-center md:flex-row flex-col-reverse">
-        <div className="h-full w-full md:w-1/2 bg-gray-800 flex items-center justify-center p-5">
+        <div className="md:h-full h-[30%] w-full md:w-1/2 bg-gray-800 flex items-center justify-center p-5">
           <div>
             <h1 className="text-white first-line:uppercase lg:text-6xl md:text-5xl text-3xl  font-bold">
               Casual Shirt
@@ -53,7 +53,7 @@ export default function TopBanner() {
             </Button>
           </div>
         </div>
-        <div className="w-full md:w-1/2 h-full">
+        <div className="w-full md:w-1/2 md:h-full h-[70%]">
           <img
             src="https://easyfashion.com.bd/wp-content/uploads/2024/05/Untitled-design-1-1536x887.webp"
             alt=""
@@ -62,7 +62,7 @@ export default function TopBanner() {
         </div>
       </SwiperSlide>
       <SwiperSlide className="h-full flex items-center md:flex-row flex-col-reverse">
-        <div className="h-full w-full md:w-1/2 bg-gray-800 flex items-center justify-center p-5">
+        <div className="md:h-full h-[30%] w-full md:w-1/2 bg-gray-800 flex items-center justify-center p-5">
           <div>
             <h1 className="text-white first-line:uppercase lg:text-6xl md:text-5xl text-3xl  font-bold">
               Polo T-Shirt
@@ -75,7 +75,7 @@ export default function TopBanner() {
             </Button>
           </div>
         </div>
-        <div className="w-full md:w-1/2 h-full">
+        <div className="w-full md:w-1/2 md:h-full h-[70%]">
           <img
             src="https://easyfashion.com.bd/wp-content/uploads/2024/05/Untitled-design-2-1536x1024.webp"
             alt=""
