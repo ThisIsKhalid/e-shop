@@ -33,7 +33,7 @@ const Header = () => {
                 <img
                   src="./icons/close.png"
                   alt=""
-                  className={`md:h-8 md:w-8 h-6 w-6 ${
+                  className={`md:h-7 md:w-7 h-6 w-6 ${
                     menuBtn
                       ? "rotate-180 transition-all duration-300 ease-in-out"
                       : ""
@@ -129,7 +129,7 @@ const Header = () => {
 
       {/* mobile menu */}
       <div
-        className={`absolute transition-all duration-700 ease-in-out bg-gray-800 text-white h-screen lg:w-[400px] w-[90%] z-50   
+        className={`absolute transition-all duration-700 ease-in-out bg-gray-800 text-white min-h-screen lg:w-[400px] w-[90%] z-50   
       ${menuBtn ? "left-0" : "-left-full"}
       `}
       >
