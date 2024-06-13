@@ -9,17 +9,17 @@ export default function ItemCard() {
 
       <p
         className="
-      absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 z-50 text-lg py-1 font-semibold text-primary bg-white px-5 rounded-tl-lg rounded-br-lg transition-opacity duration-500 ease-in-out
+      absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 text-lg py-1 font-semibold text-primary bg-white px-5 rounded-tl-lg rounded-br-lg transition-opacity duration-500 ease-in-out
       "
       >
         $ 1200
       </p>
 
-      <span className=" p-[2px] absolute bottom-[1px] left-[1px] text-2xl text-black bg-white rounded-tr-lg opacity-0 group-hover:opacity-100 z-50 cursor-pointer transition-opacity duration-500 ease-in-out">
+      <span className=" p-[2px] absolute bottom-[1px] left-[1px] text-2xl text-black bg-white rounded-tr-lg z-50 cursor-pointer transition-opacity duration-500 ease-in-out">
         <CiHeart />
       </span>
 
-      <span className="p-[2px] absolute bottom-[1px] right-[1px] text-2xl text-black bg-white rounded-tl-lg opacity-0 group-hover:opacity-100 z-50 cursor-pointer transition-opacity duration-500 ease-in-out">
+      <span className="p-[2px] absolute bottom-[1px] right-[1px] text-2xl text-black bg-white rounded-tl-lg  z-50 cursor-pointer transition-opacity duration-500 ease-in-out">
         <CiShoppingCart />
       </span>
 
