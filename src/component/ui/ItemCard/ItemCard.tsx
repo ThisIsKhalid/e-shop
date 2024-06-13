@@ -3,7 +3,7 @@ import { CiHeart, CiShoppingCart } from "react-icons/ci";
 export default function ItemCard() {
   return (
     <div className="w-full h-full relative group hover:scale-105 transition-transform duration-500 ease-in-out rounded">
-      <span className="uppercase text-xs bg-white text-black font-medium absolute top-[1px] left-1/2 -translate-x-1/2 inline-block py-1 px-2 rounded-b-lg z-50">
+      <span className="uppercase text-xs bg-white text-black font-medium absolute top-[1px] left-1/2 -translate-x-1/2 inline-block py-1 px-2 rounded-b-lg z-50 whitespace-nowrap">
         Sports T-shirt
       </span>
 

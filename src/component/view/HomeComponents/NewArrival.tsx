@@ -2,7 +2,7 @@ import ItemCard from "../../ui/ItemCard/ItemCard";
 
 export default function NewArrival() {
   return (
-    <section className="min-h-screen">
+    <section className="md:py-10 py-5">
       <div className="bg-tertiary md:px-10 px-5 py-2 text-center">
         <h1 className="text-xs md:text-sm ">
           <span className="font-semibold ">Event T-shirt :</span>{" "}

@@ -16,7 +16,7 @@ const SignUp = () => {
   const onSubmit = (data: FormValues) => console.log(data);
   return (
     <div className="signinbg px-5 py-10 min-h-screen flex items-center justify-center">
-      <div className="main_container w-full flex items-center justify-center">
+      <div className=" w-full flex items-center justify-center">
         <div className="xl:w-[40%] lg:w-[60%] md:w-3/4 w-full bg-gray-100 md:px-10 px-2 md:py-16 py-5 rounded-md shadow-md relative">
           <Link to="/" className="absolute top-3 right-3">
             <FaHome className="md:text-3xl text-2xl" />
