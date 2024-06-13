@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <section className="pt-5 md:pt-10">
+    <footer className="pt-5 md:pt-10">
       <div className="bg-secondary py-5 px-5 md:px-10 ">
         <div className="flex flex-col items-start justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3 -mt-1">
@@ -173,6 +173,6 @@ export default function Footer() {
           </span>
         </p>
       </div>
-    </section>
+    </footer>
   );
 }

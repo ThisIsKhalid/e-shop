@@ -55,7 +55,7 @@ const tShirtEditionData = [
 
 const Home = () => {
   return (
-    <div>
+    <div className="md:pt-24 pt-20">
       <TopBanner />
       <NewArrival />
       <TShirtEdition data={tShirtEditionData.slice(0, 3)} />
