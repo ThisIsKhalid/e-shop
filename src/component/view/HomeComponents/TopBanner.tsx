@@ -15,7 +15,7 @@ export default function TopBanner() {
       // mousewheel={{ releaseOnEdges: true }}
       modules={[Autoplay]}
       autoplay={{
-        delay: 2500,
+        delay: 4500,
         disableOnInteraction: false,
       }}
       spaceBetween={100}
