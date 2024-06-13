@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   CiHeart,
   CiLogin,
@@ -28,6 +28,14 @@ const Header = () => {
   };
 
   const onSubmit = (data: FormValues) => console.log(data.searchInfo);
+
+  useEffect(() => {
+    if (menuBtn) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [menuBtn]);
 
   return (
     <div className="relative">
