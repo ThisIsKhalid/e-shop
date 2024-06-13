@@ -19,6 +19,14 @@ export default function TopHeader() {
             <FaRegArrowAltCircleRight className="ml-1 group-hover:ml-3 transition-all" />
           </div>
           <div className="flex items-center gap-3 text-white/80">
+            <p className="text-sm">
+              {new Intl.DateTimeFormat("en-US", {
+                weekday: "short",
+                month: "short",
+                day: "2-digit",
+                year: "numeric",
+              }).format(new Date())}
+            </p>
             <div className="text-xs md:text-base">
               <FaFacebook />
             </div>

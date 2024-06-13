@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="pt-5 md:pt-10">
-      <div className="bg-secondary py-5 px-5 md:px-10 ">
+      <div className="bg-gray-900 text-white py-5 px-5 md:px-10 ">
         <div className="flex flex-col items-start justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3 -mt-1">
             <a
@@ -25,9 +25,7 @@ export default function Footer() {
           </div>
           <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
             <div className="space-y-3">
-              <h3 className="tracking-wide uppercase text-gray-900 font-bold">
-                Company
-              </h3>
+              <h3 className="tracking-wide uppercase  font-bold">Company</h3>
               <ul className="space-y-1">
                 <li className="hover:text-primary hover:font-bold hover:ml-2 transition-all duration-300 ease-in-out">
                   <Link to="/">ABOUT US</Link>
@@ -50,9 +48,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="tracking-wide uppercase text-gray-900 font-bold">
-                Mens
-              </h3>
+              <h3 className="tracking-wide uppercase  font-bold">Mens</h3>
               <ul className="space-y-1">
                 <li className="hover:text-primary hover:font-bold hover:ml-2 transition-all duration-300 ease-in-out">
                   <Link to="/">SHORT SLEEVE</Link>
@@ -78,9 +74,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="tracking-wide uppercase text-gray-900 font-bold">
-                Product
-              </h3>
+              <h3 className="tracking-wide uppercase  font-bold">Product</h3>
               <ul className="space-y-1">
                 <li className="hover:text-primary hover:font-bold hover:ml-2 transition-all duration-300 ease-in-out">
                   <Link to="/">MENS</Link>
@@ -94,9 +88,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="space-y-3">
-              <div className="uppercase text-gray-900 font-bold">
-                Social media
-              </div>
+              <div className="uppercase  font-bold">Social media</div>
               <div className="flex justify-start space-x-3">
                 <a
                   rel="noopener noreferrer"
@@ -156,8 +148,10 @@ export default function Footer() {
           BANGLADESH and delivered worldwide!
         </p>
 
-        <p className="text-sm flex md:flex-row flex-col items-center justify-center md:gap-10 gap-2 mt-5">
-          <span className="">© 2021 FASHION-BAZAR. All rights reserved.</span>
+        <p className="text-xs flex md:flex-row flex-col items-center justify-center md:gap-10 gap-2 mt-3">
+          <span className="">
+            © {new Date().getFullYear()} FASHION-BAZAR. All rights reserved.
+          </span>
           <span className="">
             Developed by{" "}
             <a
