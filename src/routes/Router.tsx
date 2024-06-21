@@ -4,6 +4,7 @@ import Contact from "../pages/Contact/Contact";
 import Home from "../pages/Home/Home";
 import SignIn from "../pages/Login/SignIn";
 import SignUp from "../pages/Login/SignUp";
+import Wishlist from "../pages/Wishlist/Wishlist";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path: "/wishlist",
+        element: <Wishlist />,
+      },
     ],
   },
   {
@@ -35,7 +40,7 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <div>404 Not Found</div>,
-  }
+  },
 ]);
 
 export default router;

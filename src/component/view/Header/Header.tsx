@@ -95,7 +95,9 @@ const Header = () => {
               <CiSearch className="absolute top-1/2 -translate-y-1/2 right-5 text-2xl" />
             </div>
 
-            <CiHeart className="w-6 md:w-7 h-6 md:h-7 cursor-pointer ml-0 md:ml-5" />
+            <Link to="/wishlist">
+              <CiHeart className="w-6 md:w-7 h-6 md:h-7 cursor-pointer ml-0 md:ml-5" />
+            </Link>
             <div className="relative">
               <CiShoppingCart className="w-6 md:w-7 h-6 md:h-7 cursor-pointer" />
               <span className="absolute -top-2 -right-2 bg-gray-50 rounded-full h-5 w-5 text-center text-sm">
@@ -157,16 +159,3 @@ const Header = () => {
 
 export default Header;
 
-//  <Form<FormValues> onSubmit={onSubmit}>
-//    {({ register, formState: { errors } }) => (
-//      <div>
-//        <Input
-//          {...register("searchInfo", {
-//            required: "This field is required",
-//          })}
-//          error={errors.searchInfo?.message}
-//        />
-//        <Input type="submit" />
-//      </div>
-//    )}
-//  </Form>;
