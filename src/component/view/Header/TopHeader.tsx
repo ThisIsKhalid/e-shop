@@ -19,7 +19,7 @@ export default function TopHeader() {
             <FaRegArrowAltCircleRight className="ml-1 group-hover:ml-3 transition-all" />
           </div>
           <div className="flex items-center gap-3 text-white/80">
-            <p className="text-sm">
+            <p className="text-xs hidden md:flex">
               {new Intl.DateTimeFormat("en-US", {
                 weekday: "short",
                 month: "short",
