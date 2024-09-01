@@ -41,7 +41,7 @@ const Header = () => {
     <div className=" fixed w-full z-[100] top-0">
       <TopHeader />
 
-      <div className="bg-secondary">
+      <div className="bg-gray-50">
         <div className=" flex items-center justify-between py-2 md:px-10 px-5">
           <div className="flex items-center md:gap-5 gap-3">
             <div
